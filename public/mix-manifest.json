@@ -67,15 +67,5 @@
     "/fonts/fontawesome-webfont.svg": "/fonts/fontawesome-webfont.svg",
     "/fonts/fontawesome-webfont.ttf": "/fonts/fontawesome-webfont.ttf",
     "/fonts/fontawesome-webfont.woff": "/fonts/fontawesome-webfont.woff",
-    "/fonts/fontawesome-webfont.woff2": "/fonts/fontawesome-webfont.woff2",
-    "/js/tinymce/.npmignore": "/js/tinymce/.npmignore",
-    "/js/tinymce/CHANGELOG.md": "/js/tinymce/CHANGELOG.md",
-    "/js/tinymce/README.md": "/js/tinymce/README.md",
-    "/js/tinymce/bower.json": "/js/tinymce/bower.json",
-    "/js/tinymce/composer.json": "/js/tinymce/composer.json",
-    "/js/tinymce/license.txt": "/js/tinymce/license.txt",
-    "/js/tinymce/package.json": "/js/tinymce/package.json",
-    "/js/tinymce/tinymce.d.ts": "/js/tinymce/tinymce.d.ts",
-    "/js/tinymce/tinymce.js": "/js/tinymce/tinymce.js",
-    "/js/tinymce/tinymce.min.js": "/js/tinymce/tinymce.min.js"
+    "/fonts/fontawesome-webfont.woff2": "/fonts/fontawesome-webfont.woff2"
 }

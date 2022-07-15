@@ -21,8 +21,6 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
     <link rel="stylesheet" href="{{ asset('css/vertical-rhythm.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-
-    <x-head.tinymce-config/>
 </head>
 <body class="appear-animate">
 
