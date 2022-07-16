@@ -9,10 +9,12 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="mb-20">
-                        <a href="{{ route('post.edit', $post->id) }}" class="mt-10 btn btn-mod btn-medium btn-round d-none d-sm-inline-block">{{ __('Edit') }}</a>
-                        <a href="{{ route('post.confirm', $post->id) }}" class="mt-10 btn btn-mod btn-medium btn-round d-none d-sm-inline-block">{{ __('Delete') }}</a>
-                    </div>
+                    @can('isWriter')
+                        <div class="mb-20">
+                            <a href="{{ route('post.edit', $post->id) }}" class="mt-10 btn btn-mod btn-medium btn-round d-none d-sm-inline-block">{{ __('Edit') }}</a>
+                            <a href="{{ route('post.confirm', $post->id) }}" class="mt-10 btn btn-mod btn-medium btn-round d-none d-sm-inline-block">{{ __('Delete') }}</a>
+                        </div>
+                    @endcan
 
                     <!-- Post -->
                     <div class="blog-item mb-80 mb-xs-40">
