@@ -53,46 +53,46 @@
                             <h1 class="hs-line-11 font-alt mb-0">{{ $section->name }}</h1>
                         </div>
                     </div>
+                    @can('isAdmin')
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-auto mt-1 mb-1">
+                                <p class="font-alt mb-0"><b>{{ __('sections.name') }}:</b> {{ $section->name }}</p>
+                            </div>
+                            <div class="col-auto mt-1 mb-1">
+                                <p class="font-alt mb-0"><b>{{ __('sections.modify') }}:</b> {{ $section->updated_at }}</p>
+                            </div>
+                            <div class="col-auto mt-1 mb-1">
+                                <p class="font-alt mb-0"><b>{{ __('sections.position') }}:</b> {{ $section->position }}</p>
+                            </div>
+                            <div class="col-auto mt-1 mb-1">
+                                <p class="font-alt mb-0"><b>{{ __('sections.status') }}:</b> {{ $section->status }}</p>
+                            </div>
+                            <div class="col-auto mt-1 mb-1">
+                                @if($section->position!=1)
+                                    <a href="{{ route('section.up', $section->id) }}"><i class="fa fa-arrow-up"></i></a>
+                                @endif
+
+                                @if($section->position!=$sections->count())
+                                    <a href="{{ route('section.down', $section->id) }}"><i class="fa fa-arrow-down"></i></a>
+                                @endif
+                            </div>
+                            <div class="col-auto mt-1 mb-1">
+                                <a href="{{ route('section.edit', $section->id) }}"><i class="fa fa-edit"></i></a>
+                                @if($section->status == 'public')
+                                    <a href="{{ route('section.changeStatus', $section->id) }}"><i class="fa fa-check"></i></a>
+                                @else
+                                    <a href="{{ route('section.changeStatus', $section->id) }}"><i class="fa fa-ban"></i></a>
+                                @endif
+                            </div>
+                            <div class="col-auto mt-1 mb-1">
+                                <a href="{{ route('section.confirm', $section->id) }}"><i class="fa fa-trash" style="color: red"></i></a>
+                            </div>
+                        </div>
+                    @endcan
                 </div>
             </section>
             <section class="page-section">
         <div class="container relative">
-            @can('isAdmin')
-                <div class="border-top mb-10 row align-items-center justify-content-end">
-                    <div class="col-auto mt-1 mb-1">
-                        <p class="font-alt mb-0"><b>{{ __('sections.name') }}:</b> {{ $section->name }}</p>
-                    </div>
-                    <div class="col-auto mt-1 mb-1">
-                        <p class="font-alt mb-0"><b>{{ __('sections.modify') }}:</b> {{ $section->updated_at }}</p>
-                    </div>
-                    <div class="col-auto mt-1 mb-1">
-                        <p class="font-alt mb-0"><b>{{ __('sections.position') }}:</b> {{ $section->position }}</p>
-                    </div>
-                    <div class="col-auto mt-1 mb-1">
-                        <p class="font-alt mb-0"><b>{{ __('sections.status') }}:</b> {{ $section->status }}</p>
-                    </div>
-                    <div class="col-auto mt-1 mb-1">
-                        @if($section->position!=1)
-                            <a href="{{ route('section.up', $section->id) }}"><i class="fa fa-arrow-up"></i></a>
-                        @endif
-
-                        @if($section->position!=$sections->count())
-                            <a href="{{ route('section.down', $section->id) }}"><i class="fa fa-arrow-down"></i></a>
-                        @endif
-                    </div>
-                    <div class="col-auto mt-1 mb-1">
-                        <a href="{{ route('section.edit', $section->id) }}"><i class="fa fa-edit"></i></a>
-                        @if($section->status == 'public')
-                            <a href="{{ route('section.changeStatus', $section->id) }}"><i class="fa fa-check"></i></a>
-                        @else
-                            <a href="{{ route('section.changeStatus', $section->id) }}"><i class="fa fa-ban"></i></a>
-                        @endif
-                    </div>
-                    <div class="col-auto mt-1 mb-1">
-                        <a href="{{ route('section.confirm', $section->id) }}"><i class="fa fa-trash" style="color: red"></i></a>
-                    </div>
-                </div>
-            @endcan
             {!! $section->content !!}
         </div>
     </section>
