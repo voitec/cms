@@ -22,7 +22,9 @@
 
             <!-- Scroll Down -->
             <div class="local-scroll">
+                @if(is_null($sections))
                 <a href="#{{ str_replace(' ', '-', $sections->first()->name) }}" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i><span class="sr-only">Scroll to the next section</span></a>
+                @endif
             </div>
             <!-- End Scroll Down -->
 
