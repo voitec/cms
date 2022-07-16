@@ -116,7 +116,7 @@
             <div class="works-filter font-alt align-center mt-40 mb-40" role="tablist">
                 <a href="#" class="filter active" role="tab" aria-selected="true" data-filter="*">All works</a>
                 @foreach($portfolioCategories as $portfolioCategory)
-                    <a href="#{{ $portfolioCategory->name }}" class="filter" role="tab" aria-selected="false" data-filter=".{{ $portfolioCategory->name }}">{{ $portfolioCategory->name }}</a>
+                    <a href="#{{ str_replace(' ', '-', $portfolioCategory->name) }}" class="filter" role="tab" aria-selected="false" data-filter=".{{ str_replace(' ', '-', $portfolioCategory->name) }}">{{ $portfolioCategory->name }}</a>
                 @endforeach
             </div>
             <!-- End Works Filter -->
@@ -126,7 +126,7 @@
                 @foreach($posts as $post)--}}
                     @if((($post->status == 'public' && $post->category->status == 'public') || Gate::check('isWriter')) && $post->type == 'portfolio')
                         <!-- Work Item -->
-                        <li class="work-item mix {{ $post->category->name }}">
+                        <li class="work-item mix {{ str_replace(' ', '-', $post->category->name) }}">
                             <a href="{{ route('post.show', $post->id) }}" class=" mfp-image">
                                 <div class="work-img">
                                     <img class="work-img" style="" src="{{ Storage::url($post->image) }}" alt="Work">
