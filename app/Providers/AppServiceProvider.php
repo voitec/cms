@@ -26,10 +26,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(CategoryService $categoryService, SectionService $sectionService)
     {
-        View::share([
-            'blogCategories' => $categoryService->indexBlog(),
-            'portfolioCategories' => $categoryService->indexPortfolio(),
-            'sections' => $sectionService->indexSections()
-        ]);
+        if (! App::runningInConsole()) {
+            View::share([
+                'blogCategories' => $categoryService->indexBlog(),
+                'portfolioCategories' => $categoryService->indexPortfolio(),
+                'sections' => $sectionService->indexSections()
+            ]);
+        }
+
     }
 }
