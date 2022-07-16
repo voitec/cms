@@ -80,7 +80,7 @@ class UserService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', __('messages.user.changeStatus.success',['name' => $user->name]));
+        session()->flash('success', __('messages.changeStatus.success',['name' => $user->name]));
     }
 
 }

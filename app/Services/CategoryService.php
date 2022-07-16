@@ -69,27 +69,39 @@ class CategoryService
 //        return $this->sectionRepository->getLast();
 //    }
 //
-    public function store(StoreCategoryRequest $request): Category
+    public function store(StoreCategoryRequest $request)
     {
-        return $this->categoryRepository->store($request->validated());
+        try {
+           $category = $this->categoryRepository->store($request->validated());
+        } catch(\Exception $e) {
+            session()->flash('error', $e->getMessage());
+            return back();
+        }
+        session()->flash('success', __('messages.category.store.success',['name' => $category->name]));
     }
 //
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        $this->categoryRepository->update($request->validated(), $category);
+        try {
+            $this->categoryRepository->update($request->validated(), $category);
+        } catch(\Exception $e) {
+            session()->flash('error', $e->getMessage());
+            return back();
+        }
+        session()->flash('success', __('messages.category.update.success',['name' => $category->name]));
     }
 //
     public function destroy(Category $category)
     {
         try{
             if ($this->categoryRepository->countPostsAll($category->id) > 0) {
-                throw new \Exception('W kategorii "'.$category->name.'" znajdują się wpisy! Nie można usunąć!');
+                throw new \Exception(__('messages.category.notEmpty',['name' => $category->name]));
             } else $this->categoryRepository->delete($category);
         } catch(\Exception $e) {
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Usunięto kategorię '.$category->name);
+        session()->flash('success', __('messages.category.destroy.success',['name' => $category->name]));
     }
 //
 //    public function up($section)
@@ -104,7 +116,13 @@ class CategoryService
 //
     public function changeStatus(Category $category)
     {
-        $this->categoryRepository->changeStatus($category);
+        try {
+            $this->categoryRepository->changeStatus($category);
+        } catch(\Exception $e) {
+            session()->flash('error', $e->getMessage());
+            return back();
+        }
+        session()->flash('success', __('messages.changeStatus.success',['name' => $category->name]));
     }
 
 }

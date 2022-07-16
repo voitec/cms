@@ -68,7 +68,7 @@ class PostService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Utworzono post ' . $post->name);
+        session()->flash('success', __('messages.post.store.success',['name' => $post->name]));
         return $post->fresh();
     }
 //
@@ -90,7 +90,7 @@ class PostService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Zaktualizowano post '.$post->name);
+        session()->flash('success', __('messages.post.update.success',['name' => $post->name]));
         return $post->fresh();
     }
 //
@@ -105,7 +105,7 @@ class PostService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Usunięto post '.$post->name);
+        session()->flash('success', __('messages.post.destroy.success',['name' => $post->name]));
     }
 //
 //    public function up($section)

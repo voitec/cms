@@ -48,7 +48,7 @@ class ContactMailController extends Controller
             session()->flash('email_msg', $e->getMessage());
             return back();
         }
-        return redirect(route('home').'#contact')->with(['email_msg' => 'Email successfully sent!']);
+        return redirect(route('home').'#contact')->with(['email_msg' => __('messages.email.success')]);
     }
 
 //    /**

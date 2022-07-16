@@ -17,10 +17,69 @@ return [
         'update' => [
             'success' => 'User ":name" successfully updated!'
         ],
-        'changeStatus' => [
-            'success' => 'Successfully changed status for: ":name"'
+        'store' => [
+            'success' => 'User ":name" successfully stored!'
         ],
-    ]
+    ],
+
+    'section' => [
+        'update' => [
+            'success' => 'Section ":name" successfully updated!'
+        ],
+
+        'store' => [
+            'success' => 'Section ":name" successfully stored!'
+        ],
+
+        'destroy' => [
+            'success' => 'Section ":name" successfully destroyed!'
+        ],
+
+        'move' => [
+            'success' => 'Section ":name" successfully moved!'
+        ],
+    ],
+
+    'post' => [
+        'update' => [
+            'success' => 'Post ":name" successfully updated!'
+        ],
+
+        'store' => [
+            'success' => 'Post ":name" successfully stored!'
+        ],
+
+        'destroy' => [
+            'success' => 'Post ":name" successfully destroyed!'
+        ],
+    ],
+
+    'category' => [
+        'update' => [
+            'success' => 'Category ":name" successfully updated!'
+        ],
+
+        'store' => [
+            'success' => 'Category ":name" successfully stored!'
+        ],
+
+        'destroy' => [
+            'success' => 'Category ":name" successfully destroyed!'
+        ],
+
+        'notEmpty' => 'Category ":name" not empty!'
+    ],
+
+    'email' => [
+        'success' => 'Message send!',
+        ],
+
+
+
+    'changeStatus' => [
+        'success' => 'Status changed!'
+    ],
+
 
 
 ];

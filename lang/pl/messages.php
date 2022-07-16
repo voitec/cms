@@ -14,12 +14,74 @@ return [
     */
 
     'user' => [
+
         'update' => [
             'success' => 'Użytkownik ":name" zaktualizowany!'
         ],
-        'changeStatus' => [
-        'success' => 'Zmieniono status dla: ":name"'
-],
+
+        'store' => [
+            'success' => 'Użytkownik ":name" zapisany!'
+        ],
+
+    ],
+
+    'section' => [
+
+        'update' => [
+            'success' => 'Sekcja ":name" zaktualizowana!'
+        ],
+
+        'store' => [
+            'success' => 'Sekcja ":name" zapisana!'
+        ],
+
+        'destroy' => [
+            'success' => 'Sekcja ":name" usunięta!'
+        ],
+
+        'move' => [
+            'success' => 'Sekcja ":name" przesunięta!'
+        ],
+    ],
+
+    'post' => [
+
+        'update' => [
+            'success' => 'Post ":name" zaktualizowana!'
+        ],
+
+        'store' => [
+            'success' => 'Post ":name" zapisana!'
+        ],
+
+        'destroy' => [
+            'success' => 'Post ":name" usunięta!'
+        ],
+    ],
+
+    'category' => [
+
+        'update' => [
+            'success' => 'Kategoria ":name" zaktualizowana!'
+        ],
+
+        'store' => [
+            'success' => 'Kategoria ":name" zapisana!'
+        ],
+
+        'destroy' => [
+            'success' => 'Kategoria ":name" usunięta!'
+        ],
+
+        'notEmpty' => 'Kategoria ":name" nie jest pusta!'
+    ],
+
+    'email' => [
+        'success' => 'Wiadomość wysłana!',
+    ],
+
+    'changeStatus' => [
+        'success' => 'Zmieniono status!'
     ]
 
 

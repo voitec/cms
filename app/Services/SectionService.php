@@ -39,7 +39,7 @@ class SectionService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Zapisano sekcję '.$data->name);
+        session()->flash('success', __('messages.section.store.success',['name' => $data->name]));
     }
 
     public function update($data, $section)
@@ -50,7 +50,7 @@ class SectionService
             session()->flash('error', $e->getMessage());
             return back();
         }
-            session()->flash('success', 'Zaktualizowano sekcję '.$data->name);
+        session()->flash('success', __('messages.section.update.success',['name' => $data->name]));
     }
 
     public function destroy($section)
@@ -61,7 +61,7 @@ class SectionService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Usunięto sekcję '.$section->name);
+        session()->flash('success', __('messages.section.destroy.success',['name' => $section->name]));
     }
 
     public function up($section)
@@ -72,7 +72,7 @@ class SectionService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Przesunięto sekcję '.$section->name);
+        session()->flash('success', __('messages.section.move.success',['name' => $section->name]));
     }
 
     public function down($section)
@@ -83,7 +83,7 @@ class SectionService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Przesunięto sekcję '.$section->name);
+        session()->flash('success', __('messages.section.move.success',['name' => $section->name]));
     }
 
     public function changeStatus($section)
@@ -94,7 +94,7 @@ class SectionService
             session()->flash('error', $e->getMessage());
             return back();
         }
-        session()->flash('success', 'Zmieniono status sekcji '.$section->name);
+        session()->flash('success', __('messages.changeStatus.success',['name' => $section->name]));
     }
 
 }
