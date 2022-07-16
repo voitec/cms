@@ -16,4 +16,4 @@ mix.copyDirectory('resources/css', 'public/css')
     .copyDirectory('resources/images', 'public/images')
     .copyDirectory('resources/rs-plugin', 'public/rs-plugin')
     .copyDirectory('resources/fonts', 'public/fonts')
-    .browserSync('moodart.localhost');
+    .browserSync('cms.localhost');

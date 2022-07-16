@@ -22,7 +22,7 @@
 
             <!-- Scroll Down -->
             <div class="local-scroll">
-                @if(is_null($sections))
+                @if(!is_null($sections->first()))
                 <a href="#{{ str_replace(' ', '-', $sections->first()->name) }}" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i><span class="sr-only">Scroll to the next section</span></a>
                 @endif
             </div>
@@ -46,7 +46,16 @@
     @endcan
     @foreach($sections as $section)
         @if($section->status == 'public' || Gate::check('isAdmin'))
-            <section class="page-section" id="{{ str_replace(' ', '-', $section->name) }}">
+            <section id="{{ str_replace(' ', '-', $section->name) }}" class="small-section bg-dark-lighter pt-30 pb-30">
+                <div class="relative container align-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="hs-line-11 font-alt mb-0">{{ $section->name }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page-section">
         <div class="container relative">
             @can('isAdmin')
                 <div class="border-top mb-10 row align-items-center justify-content-end">
