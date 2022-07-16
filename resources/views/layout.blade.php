@@ -73,8 +73,8 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                             @endforeach
                         </ul>
                     </li>
-                    <li><a href="{{ route('home') }}#portfolio">Portfolio</a></li>
-                    <li><a href="{{ route('home') }}#contact">Kontakt</a></li>
+                    <li><a href="{{ route('home') }}#portfolio">{{__('Portfolio')}}</a></li>
+                    <li><a href="{{ route('home') }}#contact">{{__('Contact')}}</a></li>
 
                     @guest
                         {{--                        @if (Route::has('login'))--}}

@@ -25,11 +25,20 @@ return [
     'edit_categories' => 'Edytuj kategorie',
     'new_category' => 'Nowa kategoria',
     'edit_category' => 'Edycja kategorii',
+    'edit_user' => 'Edycja użytkownika',
     'count' => 'Ilość',
     'creation_date' => 'Data utworzenia',
     'modify_date' => 'Data modyfikacji',
     'actions' => 'Akcje',
-    'preview' => 'Podgląd'
+    'preview' => 'Podgląd',
+    'image' => 'Zdjęcie główne',
+    'category' => 'Kategoria',
+    'email' => 'Email',
+    'role' => 'Rola',
+    'active' => 'Aktywny',
+    'new_user' => 'Nowy użytkownik'
+
+
 
 
 

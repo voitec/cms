@@ -12,7 +12,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header">{{ __('forms.create_user') }}</div>
+                        <div class="card-header">{{ __('forms.new_user') }}</div>
 
                         <div class="card-body">
                             <form class="form" method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">

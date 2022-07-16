@@ -89,7 +89,7 @@
 
                                         <div class="form-group row mb-20">
                                             <div class="col-md-4 col-form-label d-flex justify-content-end">
-                                                <label for="type">{{ __('forms.type') }}</label>
+                                                <label for="type">{{ __('forms.category') }}</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <select id="category_id" class="input-md form-control @error('category_id') is-invalid @enderror" name="category_id">
@@ -190,7 +190,7 @@
 
                                         <div class="form-group row mb-20">
                                             <div class="col-md-4 col-form-label d-flex justify-content-end">
-                                                <label for="type">{{ __('forms.type') }}</label>
+                                                <label for="type">{{ __('forms.category') }}</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <select id="category_id" class="input-md form-control @error('category_id') is-invalid @enderror" name="category_id">

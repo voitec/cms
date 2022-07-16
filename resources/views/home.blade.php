@@ -102,7 +102,7 @@
         <div class="relative container align-center">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="hs-line-11 font-alt mb-0">Portfolio</h1>
+                    <h1 class="hs-line-11 font-alt mb-0">{{ __('Portfolio') }}</h1>
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
             @endcan
             <!-- Works Filter -->
             <div class="works-filter font-alt align-center mt-40 mb-40" role="tablist">
-                <a href="#" class="filter active" role="tab" aria-selected="true" data-filter="*">All works</a>
+                <a href="#" class="filter active" role="tab" aria-selected="true" data-filter="*">{{ __('All') }}</a>
                 @foreach($portfolioCategories as $portfolioCategory)
                     <a href="#{{ str_replace(' ', '-', $portfolioCategory->name) }}" class="filter" role="tab" aria-selected="false" data-filter=".{{ str_replace(' ', '-', $portfolioCategory->name) }}">{{ $portfolioCategory->name }}</a>
                 @endforeach
@@ -132,7 +132,7 @@
 
             <!-- Works Grid -->
             <ul class="works-grid work-grid-3 clearfix font-alt hover-white hide-titles masonry" id="work-grid" style="position: relative; height: 1234.66px;">
-                @foreach($posts as $post)--}}
+                @foreach($posts as $post)
                     @if((($post->status == 'public' && $post->category->status == 'public') || Gate::check('isWriter')) && $post->type == 'portfolio')
                         <!-- Work Item -->
                         <li class="work-item mix {{ str_replace(' ', '-', $post->category->name) }}">
@@ -161,7 +161,7 @@
         <div class="relative container align-center">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="hs-line-11 font-alt mb-0">Kontakt</h1>
+                    <h1 class="hs-line-11 font-alt mb-0">{{__('Contact')}}</h1>
                 </div>
             </div>
         </div>
@@ -181,7 +181,7 @@
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div class="ci-title font-alt">
-                                    Call Us
+                                    {{ __('Call us') }}
                                 </div>
                                 <div class="ci-text">
                                     {{ config('cms.phone') }}
@@ -197,7 +197,7 @@
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </div>
                                 <div class="ci-title font-alt">
-                                    Address
+                                    {{__('Address')}}
                                 </div>
                                 <div class="ci-text">
                                     {{ config('cms.address1') }}</br>
@@ -253,7 +253,7 @@
 
                                 <!-- Name -->
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="input-md round form-control @error('name') is-invalid @enderror" placeholder="Name" pattern=".{3,100}" required="" aria-required="true">
+                                    <input type="text" name="name" id="name" class="input-md round form-control @error('name') is-invalid @enderror" placeholder="{{__('Name')}}" pattern=".{3,100}" required="" aria-required="true">
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -277,7 +277,7 @@
 
                                 <!-- Message -->
                                 <div class="form-group">
-                                    <textarea name="message" id="message" class="input-md round form-control @error('message') is-invalid @enderror" style="height: 88px;" placeholder="Message"></textarea>
+                                    <textarea name="message" id="message" class="input-md round form-control @error('message') is-invalid @enderror" style="height: 88px;" placeholder="{{__('Message')}}"></textarea>
                                     @error('message')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -295,7 +295,7 @@
 
                                 <!-- Inform Tip -->
                                 <div class="form-tip pt-20">
-                                    <i class="fa fa-info-circle" aria-hidden="true"></i> All the fields are required
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i> {{__('All the fields are required')}}
                                 </div>
 
                             </div>
@@ -304,7 +304,7 @@
 
                                 <!-- Send Button -->
                                 <div class="align-right pt-10">
-                                    <button type="submit" class="submit_btn btn btn-mod btn-medium btn-round" >Submit Message</button>
+                                    <button type="submit" class="submit_btn btn btn-mod btn-medium btn-round" >{{__('Send')}}</button>
                                 </div>
 
                             </div>

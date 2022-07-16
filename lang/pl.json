@@ -765,7 +765,16 @@
     "None": "Brak",
     "Read more": "Czytaj więcej",
     "Add new entry": "Dodaj nowy wpis",
-    "Create": "Tworzenie",
     "All": "Wszystko",
-    "Send": "Wyślij"
+    "Send": "Wyślij",
+    "Portfolio": "Portfolio",
+    "Call us": "Zadzwoń",
+    "Message": "Wiadomość",
+    "All the fields are required": "Wszystkie pola są wymagane",
+    "Contact": "Kontakt",
+    "Edit categories": "Edytuj kategorie",
+    "Change password": "Zmień hasło",
+    "User management": "Zarządzanie użytkownikami",
+    "Category management": "Zarządzanie kategoriami"
+
 }

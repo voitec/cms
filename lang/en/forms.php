@@ -25,10 +25,17 @@ return [
     'edit_categories' => 'Edit categories',
     'new_category' => 'New category',
     'edit_category' => 'Edit category',
+    'edit_user' => 'Edit user',
     'count' => 'Count',
     'creation_date' => 'Creation date',
     'modify_date' => 'Modify date',
     'actions' => 'Actions',
-    'preview' => 'Preview'
+    'preview' => 'Preview',
+    'image' => 'Main photo',
+    'category' => 'Category',
+    'email' => 'Email',
+    'role' => 'Role',
+    'active' => 'Active',
+    'new_user' => 'New user'
 
 ];

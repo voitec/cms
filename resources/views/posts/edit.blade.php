@@ -66,7 +66,7 @@
 
                                 <div class="form-group row mb-20">
                                     <div class="col-md-4 col-form-label d-flex justify-content-end">
-                                        <label for="type">{{ __('forms.type') }}</label>
+                                        <label for="type">{{ __('forms.category') }}</label>
                                     </div>
                                     <div class="col-md-6">
                                         <select id="category_id" class="input-md form-control @error('category_id') is-invalid @enderror" name="category_id">
@@ -123,7 +123,13 @@
                                     </div>
                                 </div>
 
-                                <img class="work-img" style="" src="{{ asset('public/image/'.$post->image)}}" alt="Work">
+                                @if(!is_null($post->image))
+                                    <div class="form-group row mb-20">
+                                        <div class="col-md-6 offset-md-4">
+                                            <img src="{{ Storage::url($post->image) }}" alt="Work">
+                                        </div>
+                                    </div>
+                                @endif
 
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
